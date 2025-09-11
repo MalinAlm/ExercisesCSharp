@@ -1456,8 +1456,40 @@ Skriv en funktion som översätter ett värde från Celsius till Fahrenheit.
 Både in-parameter och returvärde ska vara av datatyp double.
  */
 
-static double TemperatureFunction(double celcius, double farenheit)
-{
+//static double TemperatureFunction(double celcius)
+//{
+//    double farenheit = (celcius * 9) / 5 + 32;
+//    return farenheit;
+//}
 
-}
+//TemperatureFunction(-2);
 
+//5
+/*
+ Lägg in bindesträck mellan tecken i en sträng
+Skriv en funktion som tar in en sträng och returnerar en sträng med ett bindestreck mellan varje tecken.
+T.ex om man skickar in “Fredrik” , så returnerar den “F-r-e-d-r-i-k”
+ */
+
+//static string NameFunction(string name)
+//{   
+//    string sign = "-";
+//    string result = "";
+
+//    for (int i = 0; i < name.Length; i++)
+//    {
+//        result = result + name[i];
+
+//        if (i < name.Length -1)
+//        {
+//            result = result + sign;
+//        }
+
+//    }
+//    return result;
+//        }
+
+//för att skriv ut resultatet som returneras, skapa en variabel för anropet av funktionen
+//och använd det senare i tex en Console.WriteLine
+//string output = NameFunction("Malin");
+//Console.WriteLine(output);
