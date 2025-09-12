@@ -1493,3 +1493,106 @@ T.ex om man skickar in “Fredrik” , så returnerar den “F-r-e-d-r-i-k”
 //och använd det senare i tex en Console.WriteLine
 //string output = NameFunction("Malin");
 //Console.WriteLine(output);
+
+
+//6
+/*
+  Egen version av String.Join();
+Skriv en egen funktion som fungerar på samma sätt som String.Join();
+
+Exempel:
+
+MyJoin("->", "Sverige", "Norge", "Finland");
+Returvärde: "Sverige->Norge->Finland"
+ */
+
+//Skapa en funktion
+//Testa String.Join
+//Skriv en egen funktion som motsvarar String.Join
+
+
+//static string MyJoin( string separator, params string[] theStrings)
+//{
+//    string result = "";
+
+//    for (int index = 0; index < theStrings.Length; index++)
+//    {
+//        result = result + theStrings[index];
+
+//        if (index < theStrings.Length - 1 )
+//        {
+//            result = result + separator;
+//        }
+//    }
+//    return result;
+//}
+
+//string finishedString = MyJoin("->", "Sverige", "Norge", "Finland");
+//Console.WriteLine(finishedString);
+
+//Nedan används String.Join. Ovan är min egna funktion som gör samma sak
+//static string MyJoinFunction(string arrow, string sweden, string norway, string finland)
+//{
+//    string result = String.Join(arrow, sweden, norway, finland);
+//    Console.WriteLine(String.Join(result));
+
+//    return result;
+//}
+
+//string joinedString = MyJoinFunction("->", "Sverige", "Norge", "Finland");
+////Console.WriteLine(joinedString);
+
+
+//7
+/*
+ Beräkna medelvärde av int-array
+Skriv en funktion som tar en int[] in, och returnerar medelvärdet som en double.
+ */
+
+//static double AverageValue(params double[] numbers)
+//{
+
+//    double calculation = 0;
+
+//    for (int i = 0; i < numbers.Length; i++)
+//    {
+//        calculation = calculation + numbers[i];
+//    }
+//    Console.WriteLine(calculation/ numbers.Length);
+//    return calculation / numbers.Length;
+//}
+
+//AverageValue(1, 4, 5, 7, 8, 54, 32, 2);
+
+
+//8
+/*
+ Siffror till text
+Skriv en funktion som tar ett heltal in, och returnerar en string[] 
+där varje element innehåller ordet för varje siffra i talet.
+
+Exempel:
+
+NumberToWords(6543);
+Returvärde: {"sex", "fem", "fyra", "tre"}
+ */
+
+static string[] NumberToWords(int number)
+{
+    string[] stringNumbers = new string[10] { "noll","ett", "två", "tre", "fyra", "fem", "sex", "sju", "åtta", "nio" };
+    string numberString = number.ToString();
+    string[] result = new string[numberString.Length];
+
+    for (int i = 0; i < numberString.Length; i++)
+    {
+        int digit = numberString[i] - '0';
+        string convertedNumber = stringNumbers[digit];
+        result[i] = convertedNumber;
+    }
+
+    return result;
+}
+
+string[] words = NumberToWords(456863990);
+Console.WriteLine(string.Join(", ", words));
+
