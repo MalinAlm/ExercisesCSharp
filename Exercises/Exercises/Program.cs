@@ -1301,13 +1301,11 @@ OBS! Färgkodning i markdown verkar inte visas på GitHub. Check ut och visa den
 //        {
 //            Console.ForegroundColor = ConsoleColor.Red;
 //            Console.Write(chr);
-
 //        }
 //        else
 //        {
 //            Console.ForegroundColor = ConsoleColor.Gray;
 //            Console.Write(chr);
-
 //        }
 //        Console.ResetColor();
 //    }
@@ -1315,7 +1313,9 @@ OBS! Färgkodning i markdown verkar inte visas på GitHub. Check ut och visa den
 //11
 /*
  Start & Stop
-Be användaren mata in en text. Be sedan om ett startindex, och sedan om ett stopindex. Skriv ut hela texten, men alla tecken från startindex till stopindex ska vara röda.
+Be användaren mata in en text. 
+Be sedan om ett startindex, och sedan om ett stopindex. 
+Skriv ut hela texten, men alla tecken från startindex till stopindex ska vara röda.
 
 Exempel:
 
@@ -1369,29 +1369,29 @@ Välj bokstav: o
 How much wood would a woodchuck chuck if a woodchuck could chuck wood?
  */
 
-//Console.WriteLine("Mata in en text: ");
-//string textInput = Console.ReadLine();
-//char[] textArray = textInput.ToCharArray();
+Console.WriteLine("Mata in en text: ");
+string textInput = Console.ReadLine();
+char[] textArray = textInput.ToCharArray();
 
-//Console.WriteLine("Mata in en bokstav: ");
-//string charInput = Console.ReadLine();
-//bool redMarking = false;
+Console.WriteLine("Mata in en bokstav: ");
+string charInput = Console.ReadLine();
+bool redMarking = false;
 
 
-//    for (int index = 0; index < textArray.Length; index++)
-//    {
+for (int index = 0; index < textArray.Length; index++)
+{
 
-//        if (textArray[index] == charInput[0])
-//        {
-//            redMarking = !redMarking;
-//        }
+    if (textArray[index] == charInput[0])
+    {
+        redMarking = !redMarking;
+    }
 
-//        Console.ForegroundColor = redMarking ? ConsoleColor.Red : ConsoleColor.Gray;
+    Console.ForegroundColor = redMarking ? ConsoleColor.Red : ConsoleColor.Gray;
 
-//        Console.Write(textArray[index]);
+    Console.Write(textArray[index]);
 
-//        Console.ResetColor();
-//    }
+    Console.ResetColor();
+}
 
 
 // FUNKTIONER
@@ -1577,22 +1577,39 @@ NumberToWords(6543);
 Returvärde: {"sex", "fem", "fyra", "tre"}
  */
 
-static string[] NumberToWords(int number)
-{
-    string[] stringNumbers = new string[10] { "noll","ett", "två", "tre", "fyra", "fem", "sex", "sju", "åtta", "nio" };
-    string numberString = number.ToString();
-    string[] result = new string[numberString.Length];
+//static string[] NumberToWords(int number)
+//{
+//    string[] stringNumbers = new string[10] { "noll", "ett", "två", "tre", "fyra", "fem", "sex", "sju", "åtta", "nio" };
+//    string numberString = number.ToString();
+//    string[] result = new string[numberString.Length];
 
-    for (int i = 0; i < numberString.Length; i++)
-    {
-        int digit = numberString[i] - '0';
-        string convertedNumber = stringNumbers[digit];
-        result[i] = convertedNumber;
-    }
+//    for (int i = 0; i < numberString.Length; i++)
+//    {
+//        int digit = numberString[i] - '0';
+//        string convertedNumber = stringNumbers[digit];
+//        result[i] = convertedNumber;
+//    }
 
-    return result;
-}
+//    return result;
+//}
 
-string[] words = NumberToWords(456863990);
-Console.WriteLine(string.Join(", ", words));
+//string[] words = NumberToWords(456863990);
+//Console.WriteLine(string.Join(", ", words));
+
+
+//9
+
+/*
+ Heltal till text
+Skriv en funktion som tar en ushort som parameter, och returnerar en sträng med numret utskrivet i ord.
+
+Exempel:
+
+IntegerToText(6543);
+Returvärde: "six thousand five hundred forty three"
+ */
+
+
+
+
 
