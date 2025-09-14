@@ -560,7 +560,6 @@ ajdfhvajhdfd
 //            Console.Write(userInput[i]);
 //        }
 //    }
-//    //charIndexCheck++;
 //    Console.WriteLine();
 //    indexCount++;
 //}
