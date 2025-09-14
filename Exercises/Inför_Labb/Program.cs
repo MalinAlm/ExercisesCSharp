@@ -535,7 +535,7 @@ ajdfhvajhdfd
 
 //    char firstChar = userInput[letter];
 //    int stopIndex = userInput.IndexOf(userInput[letter], letter +1);
-//    //Console.WriteLine($"StartIndex: {letter}, StopIndex: {stopIndex}");
+//    //Console.WriteLine($"StartIndex: {letter}, StopIndex: {stopIndex}"); //debug
 
 //    for (int i = 0; i < userInput.Length; i++)
 //    {
