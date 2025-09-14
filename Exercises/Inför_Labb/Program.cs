@@ -135,5 +135,41 @@ Varje gång den mindre strängen förekommer (två 'o' på raken) så ska dessa 
 Övriga bokstäver är vita/grå.
  */
 
+//static void ColorLettersFunction(string text, string letters)
+//{
+//    bool greenMarking = false;
+//    int remainingGreenCount = 0;
+    
+//    for (int i = 0; i < text.Length; i++)
+//    {
+
+//        if (i <= text.Length - 2)
+//        {
+//        string letterCombo = text.Substring(i,2);
+
+//            if (letterCombo == letters)
+//            {
+//                remainingGreenCount = letters.Length;
+
+//                greenMarking = remainingGreenCount > 0;
 
 
+//            }
+
+//            if (remainingGreenCount > 0)
+//            {
+//                remainingGreenCount--;
+//            }
+//            else
+//            {
+//                greenMarking = false;
+//            }
+//        }
+//        Console.ForegroundColor = greenMarking ? ConsoleColor.Green : ConsoleColor.Gray;
+//        Console.Write(text[i]);
+
+//        Console.ResetColor();
+//    }
+//}
+
+//ColorLettersFunction("How much wood would a woodchuck chuck if a woodchuck could chuck wood?", "oo");
