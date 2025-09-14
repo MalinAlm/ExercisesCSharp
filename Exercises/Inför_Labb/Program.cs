@@ -460,3 +460,47 @@ abcdefghijklmnopqrstuvwxyz
 
 
 
+//14
+/*
+Rödmarkerade bokstäver 2
+Användaren matar in valfri sträng. Programmet skriver ut hela strängen bokstav för bokstav. 
+Alla bokstäverna är röda fram tills du stöter på ett tecken som är samma som första tecknet i strängen. 
+Därefter skriver den ut resten av bokstäverna med vit/grå färg. Några exempel vid olika inmatningar/körningar:
+
+ajdfhvajhdfd
+hhfgijff
+fjpdpog
+ */
+
+/*
+-be snvändaren mata in en sräng
+-skriv ut alla bokstäver i rött tills det kommer ett tecken som är samma som första tecknet
+-skriv ut allt efter det i vitt
+ 
+ */
+
+//Console.WriteLine("Skriv in en sträng");
+//string userInput = Console.ReadLine();
+
+//bool redMarkedLetters;
+
+//for (int letter = 0; letter < userInput.Length; letter++)
+//{
+//    char firstChar = userInput[0];
+//    int stopIndex = userInput.IndexOf(firstChar, 1);
+
+//    if (letter < stopIndex)
+//    {
+//         redMarkedLetters = true;
+//        Console.ForegroundColor = ConsoleColor.Red;
+
+//        Console.Write(userInput[letter]);
+//    }
+//    else
+//    {
+//        redMarkedLetters = false;
+//        Console.ForegroundColor = ConsoleColor.White;
+//        Console.Write(userInput[letter]);
+//    }
+//}
+//Console.ResetColor();
