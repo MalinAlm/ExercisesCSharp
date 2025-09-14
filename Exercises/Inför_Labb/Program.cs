@@ -504,3 +504,64 @@ fjpdpog
 //    }
 //}
 //Console.ResetColor();
+
+
+
+//15
+/*
+ Rödmarkerade bokstäver 3
+Användaren matar in valfri sträng. 
+Programmet skriver sedan ut en hela strängen flera gånger. 
+På första raden börjar den skriva med röd färg på första bokstaven och fram tills den hittar samma bokstav igen.
+På andra raden börjar den skriva med röd färg på andra bokstaven och fram tills den hittar samma bokstav igen. 
+På tredje raden börjar den skriva med röd text på tredje bokstaven och fram tills den hittar samma igen... etc. 
+Om man t.ex matar in “ajdfhvajhdfd” blir det då:
+ajdfhvajhdfd
+ajdfhvajhdfd
+ajdfhvajhdfd
+ajdfhvajhdfd
+... etc
+ */
+
+//Console.WriteLine("skriv in valfri text:");
+//string userInput = Console.ReadLine();
+
+//bool redMarkedLetters = false;
+
+//int indexCount = 0;
+
+//for (int letter = 0; letter < userInput.Length; letter++)
+//{
+
+//    char firstChar = userInput[letter];
+//    int stopIndex = userInput.IndexOf(userInput[letter], letter +1);
+//    //Console.WriteLine($"StartIndex: {letter}, StopIndex: {stopIndex}");
+
+//    for (int i = 0; i < userInput.Length; i++)
+//    {
+
+//        if (stopIndex == -1)
+//        {
+//            redMarkedLetters = false;
+//            Console.ForegroundColor = ConsoleColor.White;
+//            Console.Write(userInput[i]);
+//        }
+//        else if (i >= letter && i < stopIndex)
+//        {
+//            redMarkedLetters = true;
+//            Console.ForegroundColor = ConsoleColor.Red;
+//            Console.Write(userInput[i]);
+
+//        }
+//        else
+//        {
+//            redMarkedLetters = false;
+//            Console.ForegroundColor = ConsoleColor.White;
+//            Console.Write(userInput[i]);
+//        }
+//    }
+//    //charIndexCheck++;
+//    Console.WriteLine();
+//    indexCount++;
+//}
+//Console.ResetColor();
