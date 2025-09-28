@@ -1,4 +1,6 @@
-﻿// Exercises 
+﻿
+// Exercises 
+
 
 //1
 /*
@@ -616,7 +618,7 @@ Exempel:
 //}
 
 //13 Primtal
-//Primtal är heltal större än 1 som inte går att jämnt dela med något annat heltal (förutom 1 eller talet själv, eftersom alla tal är delbara med sig själva och 1). De 5 första primtalen är 2, 3, 5, 7, 11. Skriv ett program som listar de första 20 primtalen.
+//Primtal är heltal större än 1 som inte går att jämnt dela med något annat heltal (förutom 1 eller talet själv, eftersom alla tal är delbara med sig själva och 1). De 5 första primtalen är 2, 3, 5, 7, 11. Skriv ett program som         ar de första 20 primtalen.
 //Modulus/rest  %  kan användas för att se om ett tal är delbart med ett annat
 
 //bool isPrimeNumber = true;
@@ -1369,29 +1371,29 @@ Välj bokstav: o
 How much wood would a woodchuck chuck if a woodchuck could chuck wood?
  */
 
-Console.WriteLine("Mata in en text: ");
-string textInput = Console.ReadLine();
-char[] textArray = textInput.ToCharArray();
+//Console.WriteLine("Mata in en text: ");
+//string textInput = Console.ReadLine();
+//char[] textArray = textInput.ToCharArray();
 
-Console.WriteLine("Mata in en bokstav: ");
-string charInput = Console.ReadLine();
-bool redMarking = false;
+//Console.WriteLine("Mata in en bokstav: ");
+//string charInput = Console.ReadLine();
+//bool redMarking = false;
 
 
-for (int index = 0; index < textArray.Length; index++)
-{
+//for (int index = 0; index < textArray.Length; index++)
+//{
 
-    if (textArray[index] == charInput[0])
-    {
-        redMarking = !redMarking;
-    }
+//    if (textArray[index] == charInput[0])
+//    {
+//        redMarking = !redMarking;
+//    }
 
-    Console.ForegroundColor = redMarking ? ConsoleColor.Red : ConsoleColor.Gray;
+//    Console.ForegroundColor = redMarking ? ConsoleColor.Red : ConsoleColor.Gray;
 
-    Console.Write(textArray[index]);
+//    Console.Write(textArray[index]);
 
-    Console.ResetColor();
-}
+//    Console.ResetColor();
+//}
 
 
 // FUNKTIONER
@@ -1609,7 +1611,242 @@ IntegerToText(6543);
 Returvärde: "six thousand five hundred forty three"
  */
 
+//static string NumberToWords(int number)
+//{
+
+//    if (number == 0)
+//    {
+//        return "noll";
+
+//    }
+
+//    string[] ones = new string[10] { "noll", "ett", "två", "tre", "fyra", "fem", "sex", "sju", "åtta", "nio" };
+//    string[] teens = new string[10] { "tio", "elva", "tolv", "tretton", "fjorton", "femton", "sexton", "sjutton", "arton", "nitton" };
+//    string[] tens = new string[10] { "", "", "tjugo", "trettio", "fyrtio", "femtio", "sextio", "sjuttio", "åttio", "nittio" };
+
+//    List<string> partsOfNumber = new List<string>();
+
+//    if (number >= 1000)
+//    {
+//        int thousands = number / 1000;
+//        partsOfNumber.Add(ones[thousands]);
+//        partsOfNumber.Add("tusen");
+//        number %= 1000;
+
+//    }
+//    if (number >= 100)
+//    {
+//        int hundreds = number / 100;
+//        partsOfNumber.Add(ones[hundreds]);
+//        partsOfNumber.Add("hundra");
+//        number %= 100;
+
+//    }
+//    if (number >= 20)
+//    {
+//        int tenss = number / 10;
+//        partsOfNumber.Add(tens[tenss]);
+//        number %= 10;
+
+//    }
+//    if (number >= 10)
+//    {
+//        partsOfNumber.Add(teens[number - 10]);
+//        number = 0;
+
+//    }
+//    if (number > 0)
+//    {
+//        partsOfNumber.Add(ones[number]);
+//    }
+
+//    return string.Join(" ", partsOfNumber);
+//    //return;
+
+//}
+
+//string words = NumberToWords(4560);
+//Console.WriteLine(words);
 
 
+/*
+ 10. Hitta index för alla förekomster av ett givet tecken.
+Skapa funktionen int[] IndexesOf(string text, char c) som söker igenom strängen text och returnerar 
+en int[] med index till alla förekomster av c i text.
+
+Exempel:
+
+IndexesOf("Hello World!", 'o');
+Returvärde: {4, 7}
+ 
+ */
+
+//static int[] IndexesOf(string text, char p)
+//{
+
+//    List<int> indexes = new List<int>();
+
+//    for (int i = 0; i < text.Length; i++)
+//    {
+//        if (text[i] == 'p')
+//        {
+//            indexes.Add(i);
+//        }
+//    }
+
+//    return indexes.ToArray();
+
+//}
+
+//IndexesOf("Äppel", 'p');
 
 
+/*
+ 11. Kasta tärning
+Skriv en funktion ThrowDice() som returnerar ett slumpmässigt heltal 1-6. 
+Skriv en annan funktion ThrowMultipleDice(int n) som returnerar resultatet av att man slagit n tärningar.
+
+Extra utmaning: Lägg till en frivillig(optional) int på båda funktionerna, där man kan ange antal sidor på tärningen (default 6).
+
+Tips: Kolla exempelkoden för Random.Next() för att få ut slumpmässiga heltal.
+ 
+ */
+
+
+//static int ThrowDice()
+//{
+
+//    Random randomDice = new Random();
+//    return randomDice.Next(1, 7);
+
+//}
+
+//ThrowDice();
+
+//static int ThrowMultipleDice(int n)
+//{
+//    return
+//}
+
+//ThrowMultipleDice();
+// Pseudocode plan:
+// 1. Modify ThrowDice to accept an optional parameter for number of sides (default 6).
+// 2. Use a static Random instance to avoid repeated seed issues.
+// 3. Implement ThrowMultipleDice to accept number of dice and optional sides, sum up results.
+// 4. Return the sum of all dice rolls.
+
+
+//static int ThrowDice(int sides = 6)
+//{
+//    Random randomDice = new Random();
+//    return randomDice.Next(1, sides + 1);
+//}
+
+//static int ThrowMultipleDice(int n, int sides = 6)
+//{
+//    int sum = 0;
+//    for (int numberOfThrows = 0; numberOfThrows < n; numberOfThrows++)
+//    {
+//        sum += ThrowDice(sides);
+//    }
+//    return sum;
+//}
+
+//Console.WriteLine(ThrowDice());
+//Console.WriteLine(ThrowMultipleDice(30));
+
+
+/*
+ 12. Rita en box
+Skriv en funktion DrawBox(int width, int height). 
+När man anropar funktionen ska den skriva ut en rektangel där de yttre tecknen består av ‘#’ och de inre av ‘-’.
+
+Exempel: DrawBox(7, 4);
+
+#######
+#-----#
+#-----#
+#######
+ */
+
+
+//static void DrawBox(int width, int height)
+//{
+//    for (int h = 0; h < height; h++)
+//    {
+//        for (int w = 0; w < width; w++)
+//        {
+
+//            if (h == 0 || h == height - 1 || w == 0 || w == width - 1)
+//            {
+//                Console.Write('#');
+//            }
+//            else
+//            {
+//                Console.Write('-');
+//            }
+//        }
+//        Console.WriteLine();
+//    }
+//}
+
+//DrawBox(4,7);
+
+
+/*13. Flytta runt ett @ med piltangenterna.
+Låt oss skriva början till ett enkelt spel:
+
+Använd DrawBox-funktionen i föregående uppgift för att rita en box på skärmen. 
+Placera sedan ett @ i mitten av boxen. Om man använder piltangenterna ska man kunna flytta runt @. 
+När den kommer till kanten av boxen så ska den inte kunna gå längre åt det hållet.
+
+Tips: För att flytta @ behöver du skriva ‘-’ på dess tidigare position och ‘@’ på den nya positionen. 
+Spara bredd och höjd på boxen så du vet när den ska stanna.
+
+Tips: Kolla upp Console.ReadKey(); och Console.KeyAvailable;
+
+*/
+
+//int width = 10;
+//int height = 5;
+//int atX = width / 2;
+//int atY = height / 2;
+//static void DrawBox(int width, int height, int atX, int atY)
+//{
+//    char atSymbol = '@';
+
+//    for (int y = 0; y < height; y++)
+//    {
+//        for (int x = 0; x < width; x++)
+//        {
+//            if (y == 0 || y == height - 1 || x == 0 || x == width - 1)
+//            {
+//                Console.Write('#');
+//            }
+//            else if (y == atY && x == atX)
+//            {
+//                Console.Write(atSymbol);
+//            }
+//            else
+//            {
+//                Console.Write('-');
+//            }
+//        }
+//        Console.WriteLine();
+//    }
+//}
+
+//    while (true)
+//    {
+//        Console.Clear();
+//        DrawBox(width, height, atX, atY);
+//        var key = Console.ReadKey(true).Key;
+
+//            if (key == ConsoleKey.Escape) break;
+//            if (key == ConsoleKey.LeftArrow && atX > 1) atX--;
+//            if (key == ConsoleKey.RightArrow && atX < width - 2) atX++;
+//            if (key == ConsoleKey.UpArrow && atY > 1) atY--;
+//            if (key == ConsoleKey.DownArrow && atY < height - 2) atY++;
+//    }
+
+  
